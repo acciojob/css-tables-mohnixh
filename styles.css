@@ -15,8 +15,8 @@ table {
 
 th, td {
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5rem;
+  border-radius: 5px; /* Ensure border-radius is exactly 5px */
+  padding: 8px; /* Ensure padding is exactly 8px */
   text-align: left;
 }
 
@@ -24,10 +24,10 @@ th {
   font-weight: bold;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(odd) td {
   background-color: #f2f2f2;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
   background-color: #ffffff;
 }
