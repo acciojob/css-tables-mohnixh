@@ -15,9 +15,20 @@ table {
 
 th, td {
   border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 8px;
   text-align: left;
+  position: relative;
+}
+
+/* Create rounded corners using pseudo-elements */
+th:first-child, td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+th:last-child, td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 th {
