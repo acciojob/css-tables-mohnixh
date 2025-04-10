@@ -8,7 +8,7 @@ body {
 }
 
 table {
-  border-collapse: separate; /* Needed for border-radius */
+  border-collapse: separate;
   border-spacing: 0;
 }
 
@@ -16,21 +16,19 @@ th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
-  border-radius: 5px; /* ✅ Must be directly applied */
-  background-clip: padding-box; /* ✅ Helps force computed radius */
-  background-color: white; /* default */
-  overflow: hidden; /* ✅ Helps visual rendering of border-radius */
+
+  /* ✅ Needed for Cypress to detect it */
+  border-radius: 5px !important;
+  background-clip: padding-box;
+  overflow: hidden;
+  background-color: #fff;
 }
 
-th {
-  font-weight: bold;
-}
-
-/* Zebra striping */
+/* ✅ Explicitly add even/odd background colors */
 tbody tr:nth-child(odd) td {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 tbody tr:nth-child(even) td {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
 }
